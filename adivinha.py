@@ -3,11 +3,15 @@ import random
 numero_secreto = random.randint(1, 100)
 
 print("🎯 Jogo de Adivinhar o Número")
-print("Pensei em um número entre 1 a 100.")
+print("Pensei em um número entre 1 e 100.")
 
-palpite = int(input("Qual é o seu palpite? "))
+acertou = False
 
-if palpite == numero_secreto:
-    print("Acertou! 🎉")
-else:
-    print(f"Errou! O número era {numero_secreto}.")
+while not acertou:
+    palpite = int(input("Qual é o seu palpite? "))
+
+    if palpite == numero_secreto:
+        print("Acertou! 🎉")
+        acertou = True
+    else:
+        print("Errou, tente de novo!")
